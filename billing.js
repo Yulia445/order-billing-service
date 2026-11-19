@@ -6,7 +6,7 @@ function calculateDeliveryCost(city, weightKg) {
     } else if (city === "Kyiv") {
         baseRate = 80.0;
     }
-    return baseRate + (weightKg * 12.0);
+    return baseRate + (weightKg * 15.0);
 }
 
 //  Окрема функція для стандартного розрахунку з явним параметром taxRate
