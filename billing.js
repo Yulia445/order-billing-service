@@ -4,7 +4,7 @@ function calculateDeliveryCost(city, weightKg) {
     return baseRate + (weightKg * 12.0);
 }
 
-// Окрема функція для стандартного розрахунку з явним параметром taxRate
+//  Окрема функція для стандартного розрахунку з явним параметром taxRate
 function processStandardInvoice(amount, city, weightKg, taxRate = 0.20) {
     const delivery = calculateDeliveryCost(city, weightKg);
     const total = (amount * (1 + taxRate)) + delivery;
