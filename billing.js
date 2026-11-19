@@ -1,6 +1,11 @@
 // Data Coupling: функція приймає виключно примітивні параметри city та weightKg
 function calculateDeliveryCost(city, weightKg) {
-    const baseRate = city === "Ivano-Frankivsk" ? 50.0 : 110.0;
+    let baseRate = 110.0;
+    if (city === "Ivano-Frankivsk") {
+        baseRate = 50.0;
+    } else if (city === "Kyiv") {
+        baseRate = 80.0;
+    }
     return baseRate + (weightKg * 12.0);
 }
 
